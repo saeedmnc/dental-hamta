@@ -1,0 +1,89 @@
+<hims-loading *ngIf="isBusy"></hims-loading>
+<div class="ltr position-relative h-100" *ngIf="!isBusy">
+    <div class="row m-0 pt-4 h-100 ">
+        <div class="col-lg-9 h-100">
+            <mat-card class="h-100">
+                <mat-card-content>
+                    <div class="div-header gray1 px-2 text-right  iran-sans-bold font-18">
+                        {{chart.name}}
+                    </div>
+                    <div class=" w-100 my-card ">
+                        <div class="chart h-100 " style="display: flex;justify-content: center;align-items: center;">
+                            <chart-bar-horizental [gradient]="chart.isGradiant" [colorScheme]="colorScheme"
+                                [view]="view" *ngIf="chart.typeIX==1" [cahrtData]="data"
+                                [showXAxis]="chart.isShowAxis"></chart-bar-horizental>
+                            <chart-bar-vertical [gradient]="chart.isGradiant" [colorScheme]="colorScheme" [view]="view"
+                                *ngIf="chart.typeIX==3" [cahrtData]="data"
+                                [showXAxis]="chart.isShowAxis"></chart-bar-vertical>
+                            <chart-pie [colorScheme]="colorScheme" [showLabels]="chart.isLabel"
+                                [isDoughnut]="chart.isDonut" [gradient]="chart.isGradiant" *ngIf="chart.typeIX==2"
+                                [view]="view" [cahrtData]="data"></chart-pie>
+                            <chart-pie-grid [colorScheme]="colorScheme" [showLabels]="chart.isLabel"
+                                *ngIf="chart.typeIX==4" [view]="view" [cahrtData]="data"></chart-pie-grid>
+                            <chart-gauge [colorScheme]="colorScheme" [legend]="true"
+                                *ngIf="chart.typeIX==5" [view]="view" [cahrtData]="data"></chart-gauge>
+                            <chart-pie-advance [colorScheme]="colorScheme" 
+                                *ngIf="chart.typeIX==6" [view]="view" [cahrtData]="data"></chart-pie-advance>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-lg-3 rtl  px-3">
+            <mat-card>
+                <mat-card-content>
+                    <div>
+                        <mat-slide-toggle [(ngModel)]="chart.isGradiant">گرادیانت</mat-slide-toggle>
+                    </div>
+                    <div class="pt-2" *ngIf="chart.typeIX==1 || chart.typeIX==3">
+                        <mat-slide-toggle [(ngModel)]="chart.isShowAxis">نمایش محورها</mat-slide-toggle>
+                    </div>
+                    <div class="pt-2" *ngIf="chart.typeIX==2">
+                        <mat-slide-toggle [(ngModel)]="chart.isLabel">نمایش لیبل ها</mat-slide-toggle>
+                    </div>
+                    <div class="pt-2" *ngIf="chart.typeIX==2">
+                        <mat-slide-toggle [(ngModel)]="chart.isDonut">نمایش دونات</mat-slide-toggle>
+                    </div>
+                    <div class="pt-2">
+                        <button mat-button color="primary" class="px-0 gray1" [matMenuTriggerFor]="chartType">
+                            <span class="material-icons-outlined gray1">
+                                insert_chart
+                            </span>
+                            <span class="">
+                                نوع نمودار
+                            </span>
+                        </button>
+                    </div>
+                    <div class="pt-2">
+                        <button mat-button color="primary" class="px-0 gray1" [matMenuTriggerFor]="palette">
+                            <span class="material-icons-outlined gray1 ">
+                                palette
+                            </span>
+                            <span class="">
+                                تم رنگی
+                            </span>
+                        </button>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <button mat-button class="btn-gray mat-btn36 back-btn" (click)="onClosePreview()">
+        <span class="material-icons-outlined btn-gray">
+            arrow_back
+        </span>
+    </button>
+    <mat-menu #palette="matMenu">
+        <div mat-menu-item class="font-12" (click)="onSelectTheme(item)"
+            *ngFor="let item of baseData.chartThemePalette">
+            {{item.name}}
+        </div>
+    </mat-menu>
+    <mat-menu #chartType="matMenu">
+        <div mat-menu-item class="font-12" (click)="onChangeChartType(item.code)"
+            *ngFor="let item of baseData.chartType">
+            {{item.name}}
+        </div>
+    </mat-menu>
+</div>

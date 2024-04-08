@@ -1,0 +1,51 @@
+<div class="div-main">
+    <mat-card class="no-shadow-card">
+        <mat-card-content>
+            <div class="row">
+                <div class="div-mounth-selector">
+                    <div class="my-row justify-content-center w-100">
+                        <button class="mat-btn36" mat-button>
+                            <span class="material-icons-outlined">
+                                navigate_next
+                            </span>
+                        </button>
+                        <div class="align-self-center gray pt-1">
+                            {{cacheData.today.monthOfYearNameJalali}}
+                        </div>
+                        <button class="mat-btn36" mat-button>
+                            <span class="material-icons-outlined">
+                                navigate_before
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="my-row" *ngIf="mode=='doctor'">
+                    <button (click)="onSelectedDay(day)" [matMenuTriggerFor]="shiftMenu"
+                        [ngClass]="{'today':selectedDay==day,'schedule-selcted':checkScheduleDr(day)}" mat-icon-button
+                        class="day-item font-12 gray mat-btn-36" *ngFor="let day of getDayes()">
+                        {{day}}
+                    </button>
+                </div>
+                <div class="my-row" *ngIf="mode=='patient'">
+                    <button (click)="onSelectedPatientScheduleDay(day)"
+                        [ngClass]="{'today':selectedDay==day,'schedule-selcted':checkScheduleDr(day)}" mat-icon-button
+                        class="day-item font-12 gray mat-btn-36" *ngFor="let day of getDayes()">
+                        {{day}}
+                    </button>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+<mat-menu #shiftMenu="matMenu" class="font-12">
+    <button [ngClass]="{'selected-shift':shiftType==shift.code}" mat-menu-item
+        *ngFor="let shift of cacheData.shiftList">
+        <div class="my-row" (click)="onSlectedShift(shift.code)">
+            <div>
+                <span>
+                    شیفت {{shift.name}}
+                </span>
+            </div>
+        </div>
+    </button>
+</mat-menu>

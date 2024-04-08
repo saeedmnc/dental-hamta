@@ -1,0 +1,32 @@
+.k-grid td.k-selected,
+.k-grid tr.k-selected>td {
+    background-color: #b7e4ff !important;
+    color: inherit !important;
+}
+
+/* .k-grid-header {
+    padding: 0px 0px 0px 17px !important;
+} */
+
+kendo-grid-filter-menu {
+    padding-left: 16px !important;
+}
+
+.k-grid tbody {
+    text-align: right;
+}
+
+.k-filter-menu-container {
+    font-family: 'iran-sans' !important;
+    font-size: 12px !important;
+}
+
+.k-picker-md {
+    font-size: inherit !important;
+    text-align: inherit !important;
+    /* direction: rtl; */
+}
+
+.k-grid tr.k-alt {
+    background-color: #7575750a;
+}

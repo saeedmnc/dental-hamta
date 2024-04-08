@@ -1,0 +1,42 @@
+<div class="div-main">
+    <div class=" px-2 my-row py-2 font-16 ">
+        <div class="gray1">
+            دندان شماره : {{cacheData.selectedTooth.toothNum}}
+        </div>
+        <div class="fill">
+            <button mat-stroked-button class="mx-2" color="primary">
+                <span class="material-icons-outlined">
+                    refresh
+                </span>
+                <span class="font-12">
+                    تنظیم مجدد
+                </span>
+            </button>
+            <button mat-stroked-button class="mx-2" color="primary" (click)="onRemoveTooth()">
+                <span class="font-12">
+                    فاقد دندان
+                </span>
+                <span class="material-icons-outlined">
+                    refresh
+                </span>
+            </button>
+            <button mat-stroked-button class="mx-2" color="primary" (click)="onSelectTreatmentstype(1)">
+                <span class="font-12">
+                    تشخیص
+                </span>
+                <span class="material-icons-outlined">
+                    add
+                </span>
+            </button>
+            <button mat-stroked-button class="mx-2" color="primary">
+                <span class="font-12">
+                    درمان
+                </span>
+                <span class="material-icons-outlined">
+                    add
+                </span>
+            </button>
+        </div>
+    </div>
+
+</div>

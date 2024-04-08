@@ -1,0 +1,19 @@
+<div class="form-group full-width" [hidden]="isHidden()" [ngStyle]="{'width.px': width}">
+    <label for="tbValue" class="caption pb-1" *ngIf="(!modeView || value) && !isHideCaption && !isCaptionHoriz">
+        {{ caption }}
+    </label>
+    <div class="input-group">
+        <label for="tbValue" class="caption caption-horiz" [ngClass]="{'caption-horiz-ltr': isLtr}"
+            [ngStyle]="{'width.px': captionWidth,'fontSize.px': captionFontSize}"
+            *ngIf="(!modeView || value) && !isHideCaption && isCaptionHoriz">
+            {{ caption }}
+        </label>
+        <textarea [(ngModel)]="value" (keyup)="onKeydown($event)" class="form-control" title="{{ caption }}"
+            (change)="onValueChanged()" (blur)="onBlur()" [disabled]="isReadOnly || modeView"
+            [maxlength]="maxlength>0?maxlength:10000" autocomplete="doNotAutoComplete"
+            [ngClass]="{notValid:!isValid,'form-edit-readonly-with-border': isReadOnlyBorder && isReadOnly, 'form-control-sm': isSmall,'ltr':(isLtr || isValueLtr)}"
+            [required]="isMandatory" (focus)="onFocus()" *ngIf="!isDigitOnly && !isPassword"
+            [ngStyle]="{'fontSize.px': fontSize}" [style]="backcolorStyle" [placeholder]="placeholder" cols="cols"
+            ></textarea>
+    </div>
+</div>

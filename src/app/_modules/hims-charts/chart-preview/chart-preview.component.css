@@ -1,0 +1,27 @@
+.div-main {
+    position: relative;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
+    border-radius: 0.7rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0.7%;
+    top:-2%;
+}
+.position-relative{
+    position: relative;
+}
+.text-right{
+    text-align: right;
+}
+
+.my-card{
+    height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,16 @@
+<div class="div-main">
+    <div class="caption pb-1">
+    {{caption}}
+    </div>
+    <input type="text" class="form-control" #input (focus)="onFocuse()" >
+    <div cdkDropList class="example-list"  (cdkDropListDropped)="drop($event)" *ngIf="isshowList">
+        <div class="example-box my-row" *ngFor="let item of dataSource;let index=index" cdkDrag>
+            <div class="div-num ml-2">
+                {{index+1}}
+            </div>
+            <div class="fill">
+                {{item.name}}
+            </div>
+        </div>
+    </div>
+</div>

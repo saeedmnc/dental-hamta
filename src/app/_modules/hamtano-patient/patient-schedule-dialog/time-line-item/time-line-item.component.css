@@ -1,0 +1,55 @@
+.div-time {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.div-hour {
+    height: 30px;
+    border-bottom: 1px solid lightgray;
+    background-color: #f3f3f3;
+}
+
+.div-disable {
+    background-color:#f3f3f3 !important;
+}
+
+.div-min {
+    border-left: 1px solid #f3f3f3;
+    width: 25%;
+    height: 100%;
+
+}
+
+.schedule-disable {
+    background-color: red;
+    cursor: default;
+}
+
+.div-scheudle {
+    background-color: #ff8f00;
+    color: white !important;
+}
+
+.quarter-div {
+    background-color: #24bf53;
+    color: white !important;
+
+}
+
+.half-div {
+    background-color: #25c6da;
+    color: white !important;
+
+}
+
+.theree-quarter-div {
+    background-color: #f97ba2;
+    color: white !important;
+
+}
+
+.hole-div {
+    background-color: #ff8f00;
+    color: white !important;
+}

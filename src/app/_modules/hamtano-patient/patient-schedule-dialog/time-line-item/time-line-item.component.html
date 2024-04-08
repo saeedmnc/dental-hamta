@@ -1,0 +1,28 @@
+<div class="div-time flex-column overflow-y" [ngClass]="{'div-disable':!CheckShift()}" (click)="onSlected()">
+    <div class="div-hour w-100 align-self-center overflow-y flex-column justify-content-center font-10 text-center">
+        {{time}}
+    </div>
+    <div class="fill   w-100" *ngIf="selectedTime==scheduleType && isDisableSchedule">
+        <div class="my-row h-100 w-100">
+            <div (click)="onSelectedItem(15)"
+                [ngClass]="{'quarter-div':partSelected==15,'half-div':partSelected==30,'theree-quarter-div':partSelected==45,'hole-div':partSelected==60}"
+                class="div-min flex-column overflow-y justify-content-center  align-items-center font-10 gray">
+                '15
+            </div>
+            <div (click)="onSelectedItem(30)"
+                [ngClass]="{'half-div':partSelected==30,'theree-quarter-div':partSelected==45,'hole-div':partSelected==60}"
+                class="div-min flex-column overflow-y justify-content-center  align-items-center font-10 gray">
+                '30
+            </div>
+            <div (click)="onSelectedItem(45)"
+                [ngClass]="{'theree-quarter-div':partSelected==45,'hole-div':partSelected==60}"
+                class="div-min flex-column overflow-y justify-content-center  align-items-center font-10 gray">
+                '45
+            </div>
+            <div (click)="onSelectedItem(60)" [ngClass]="{'hole-div':partSelected==60}"
+                class="div-min flex-column overflow-y justify-content-center  align-items-center font-10 gray">
+                '60
+            </div>
+        </div>
+    </div>
+</div>

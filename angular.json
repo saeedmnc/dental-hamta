@@ -25,7 +25,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "ag-grid/dist/styles/ag-theme-bootstrap.css",
+              "ag-grid/dist/styles/ag-grid.css"
             ],
             "scripts": []
           },
@@ -34,8 +37,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "20mb",
+                  "maximumError": "50mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -87,12 +90,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "ag-grid/dist/styles/ag-theme-bootstrap.css",
+              "src/styles.css",
+              "ag-grid/dist/styles/ag-grid.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "2f0d68cb-6f45-4cfd-86a9-4a89640e732d"
   }
 }

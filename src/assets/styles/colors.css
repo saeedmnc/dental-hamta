@@ -1,0 +1,229 @@
+.shafa-blue {
+    color: #6ABDFF;
+}
+
+.shafa-blue-back {
+    background-color: #6ABDFF !important;
+}
+
+.shafa-blue2-back {
+    background-color: #0075ff !important;
+}
+
+.shafa-pink {
+    color: #F97BA3;
+}
+
+.shafa-pink-back {
+    background-color: #F97BA3 !important;
+}
+
+.pink-light-back {
+    background-color: #f97ba34a;
+}
+
+.btn-pink {
+    background-color: #F97BA3 !important;
+    color: white !important;
+}
+
+.btn-light-blue{
+    background-color: #6cbaff !important;
+    color: white !important;
+}
+
+.shafa-gray {
+    color: #F0F0F0;
+}
+
+.shafa-gray-back {
+    background-color: #F0F0F0;
+}
+
+.back-gray1 {
+    background-color: #f5f5f5 !important;
+}
+
+.back-light-gray {
+    background: #fafafa;
+}
+
+.white {
+    color: white;
+}
+
+.gray1 {
+    color: #717171;
+}
+
+.btn-gray {
+    color: #717171;
+}
+
+.btn-gray1 {
+    color: #717171;
+}
+
+.blue2 {
+    color: #c4b8f3;
+}
+
+.navy {
+    color: #ab49ba;
+}
+
+.white {
+    color: white;
+}
+
+.gray {
+    color: gray;
+}
+
+.div-warning {
+    background-color: #fffbca !important;
+}
+
+.div-error{
+    background-color: #f8d7da !important;
+}
+
+.icon-warning{
+    color: #fce903 !important;
+}   
+
+.row-normal {
+    background-color: white !important;
+    font-style: normal;
+}
+
+.row-add {
+    /* background-color: Aqua !important; */
+    background-color: #f8ede3 !important; ;
+    font-style: italic;
+}
+
+.row-update {
+    /* background-color: Aqua !important; */
+    background-color: #f8ede3 !important; ;
+    /* color: blue; */
+    font-style: italic;
+}
+
+.row-disable {
+    background-color: #d3d3d347 !important;
+    font-style: italic;
+    color: darkgray;
+}
+
+.row-remove {
+    background-color: #f0c1bc !important;
+    color: #848383;
+    font-style: italic;
+}
+
+.row-cancel {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.row-done {
+    color: gray;
+}
+
+.row-consult{
+    background-color: #d2f7d2 !important;
+}
+
+.row-que-ans {
+    color: #b3b2b2 !important;
+    font-style: italic;
+}
+
+.ag-theme-balham .ag-row-selected {
+    background-color: #b7e4ff !important;
+    background-color: var(--ag-selected-row-background-color, #b7e4ff) !important;
+}
+
+.row-azad {
+    background-color: #ffffd0 !important
+}
+
+.row-ptype-in,
+.row-inpatient {
+    /* background-color: #f9f916 !important; */
+    background-color: #ffffc3 !important
+}
+
+.k-alt {
+    background-color: #f4faff;
+}
+
+.row-discharged {
+    background-color: #f8e6cb !important;
+}
+
+.row-child {
+    color: #0e00a3 !important;
+}
+
+.row-emerg {
+    background-color: #f9f916 !important;
+}
+
+.row-not-printed {
+    background-color: greenyellow !important;
+}
+
+.row-return {
+    background-color: skyblue !important;
+}
+
+.row-canceled {
+    background-color: #a24b40 !important;
+    color: white;
+}
+
+.row-accepted {
+    background-color: lightgreen !important;
+}
+
+.row-inprogress {
+    background-color: violet !important;
+}
+
+.row-result-ready {
+    background-color: #ffffd0 !important
+}
+
+.row-result-manual {
+    background-color: rgb(250,170,240)  !important;
+}
+
+.row-result-readonly {
+    background-color: lightgray !important;
+}
+
+.row-result-risk {
+    background-color: #f1b9a5!important;
+}
+
+.row-result-anormal{
+    background-color: #ffffdc !important;   
+}
+
+.order-warning-icon {
+    color: #ffcb27
+}
+
+.order-change-icon{
+    color: #0164d7 !important;
+}
+
+.order-accept-icon{
+    color: #0164d7 !important;
+}
+
+.order-cancel-icon{
+    color: red;
+}

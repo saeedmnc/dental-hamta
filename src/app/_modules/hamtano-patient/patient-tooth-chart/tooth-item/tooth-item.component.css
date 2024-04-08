@@ -1,0 +1,30 @@
+.upper-img{
+    width: 41px;
+    height: 130.35px;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.front-img{
+width: 44px;
+height: 58px;
+}
+
+.lower-image{
+    rotate:180deg;
+    width: 41px;
+    height: 130.35px;
+    transform: scaleX(-1);
+}
+
+.div-main{
+    cursor:pointer;
+}
+
+.div-main:hover{
+    background-color:rgb(158,241,242,.4);
+    border-radius:2px
+
+}

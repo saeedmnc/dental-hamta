@@ -1,0 +1,22 @@
+::ng-deep.k-grid td {
+    border-left: 0px !important;
+    border-right: 0px !important;
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+}
+
+::ng-deep .k-grid-content {
+    overflow-y: auto;
+}
+
+::ng-deep .k-grid-header {
+    padding: 0 !important;
+    color: gray;
+    font-size: 12px;
+}
+
+::ng-deep .k-column-title {
+    font-size: 12px;
+}

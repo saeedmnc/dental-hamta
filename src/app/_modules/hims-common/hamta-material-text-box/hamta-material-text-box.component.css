@@ -1,0 +1,7 @@
+.mat-mdc-form-field {
+    height: 70px !important;
+}
+
+mat-label {
+    font-size: 12px !important;
+}

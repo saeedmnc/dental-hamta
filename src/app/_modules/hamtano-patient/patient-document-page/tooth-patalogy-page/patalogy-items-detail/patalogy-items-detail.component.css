@@ -1,0 +1,19 @@
+.item-btn {
+    background-color: #fff;
+    /* padding: 18px 80px; */
+    text-align: center;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.big-btn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+.selected-btn{
+    background-color: #7a8599;
+    color: white;
+}

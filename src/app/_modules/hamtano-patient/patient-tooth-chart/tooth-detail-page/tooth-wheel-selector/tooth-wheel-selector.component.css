@@ -1,0 +1,20 @@
+.tooth-up {
+    width: 150px;
+    height: 150px;
+}
+
+.tooth-lower {
+    width: 150px;
+    height: 150px;
+    rotate: 180deg;
+    transform: scaleX(-1);
+}
+
+.tooth-front {
+    width: 80px;
+    /* height: 80px; */
+}
+
+.div-main{
+    background-color: #202633;
+}

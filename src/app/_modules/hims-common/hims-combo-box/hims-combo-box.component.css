@@ -1,0 +1,9 @@
+::ng-deep .ng-select .ng-select-container {
+    min-height: 36px !important;
+    height: 36px !important;
+}
+
+.text-right {
+    text-align: right !important;
+    direction: rtl !important;
+}

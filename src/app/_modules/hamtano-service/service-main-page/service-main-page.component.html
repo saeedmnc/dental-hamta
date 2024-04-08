@@ -1,0 +1,37 @@
+<div class="div-main">
+    <div class="header">
+        <panel-haeder (openSidenavEvent)="cacheData.isSideOpen=true"></panel-haeder>
+    </div>
+    <div class="row m-0 px-0 mt-3">
+        <div class="col-lg-3 ltr">
+
+            <mat-card class="no-shadow-card align-self-center">
+                <div class="px-3 pt-2 text-center  ">
+                    <button matTooltip="اضافه کردن گروه" mat-stroked-button class="font-12 " (click)="onAddService()">
+                        افزودن گروه
+
+                    </button>
+                    <button matTooltip="اضافه کردن گروه" mat-stroked-button class="font-12 mx-1"
+                        (click)="onAddServiceItem()">
+                        افزودن زیر گروه
+                    </button>
+                </div>
+                <mat-card-content>
+                    <div class="div-tree-view mt-3">
+                        <kendo-treeview class="rtl" [nodes]="services" textField="name" kendoTreeViewHierarchyBinding
+                            childrenField="items" kendoTreeViewExpandable (selectionChange)="onSelectedService($event)">
+                            <ng-template kendoTreeViewNodeTemplate let-dataItem>
+                                <div class="font-12">
+                                    {{dataItem.name}}
+                                </div>
+                            </ng-template>
+                        </kendo-treeview>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-lg-9">
+            <services-grid [servicesItem]="servicesItem"></services-grid>
+        </div>
+    </div>
+</div>

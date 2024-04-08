@@ -1,0 +1,6 @@
+<div class="div-main">
+    <mat-form-field class="w-100" [appearance]="appearance">
+        <mat-label>{{label}}</mat-label>
+        <input class="font-12" (change)="onValueChanged()" matInput [placeholder]="placeholder" [value]="value" [(ngModel)]="value">
+      </mat-form-field>
+</div>

@@ -1,0 +1,20 @@
+<div class="div-main">
+    <hims-loading-progress *ngIf="isBusy"></hims-loading-progress>
+    <mat-card class="no-shadow-card">
+        <mat-card-content>
+            <div class="caption my-row">
+                <div class="align-self-center">
+                    {{caption}}
+                </div>
+                <div class="flex-row ltr fill">
+                    <span class="span-date">
+                        <!-- <hims-combo-box [dataSource]="DateList" [isHideCaption]="true"></hims-combo-box> -->
+                    </span>
+                </div>
+            </div>
+            <chart-pie *ngIf="chartType==1" [view]="view" [isDoughnut]="false" [cahrtData]="chartData"></chart-pie>
+            <chart-bar-vertical *ngIf="chartType==2" [view]="view" [cahrtData]="chartData"></chart-bar-vertical>
+            <!-- <chart-pie *ngIf="chartType==2" [view]="[300,150]" [isDoughnut]="false" [cahrtData]="chartData"></chart-pie> -->
+        </mat-card-content>
+    </mat-card>
+</div>

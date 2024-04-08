@@ -1,0 +1,23 @@
+.div-item {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    display: flex;
+    padding: 11px 18px;
+    border: 1px solid #e6e7eb;
+    margin-bottom: 8px;
+    color: #4d5565;
+    background: #f2f4f7;
+}
+
+.border-yellow {
+    border-right: 3px solid #ffd006;
+}
+
+.border-red {
+    border-right: 3px solid red;
+}

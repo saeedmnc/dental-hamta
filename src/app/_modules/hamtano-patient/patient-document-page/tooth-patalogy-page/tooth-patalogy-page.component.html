@@ -1,0 +1,73 @@
+<div class="div-main h-100 ">
+    <div class="row m-0 h-100 px-0">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-9 h-100 overflow-y flex-column">
+            <div class="fill">
+                <div class="title my-row rtl gray dana-bold px-3 py-3 ">
+                    <div class=" font-18 fill align-self-center">
+                        تشخیص
+                    </div>
+                    <div class="ltr">
+                        <button mat-button class="mat-btn24">
+                            <span class="material-icons-outlined" (click)="onClose()">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <mat-divider class=""></mat-divider>
+                <div class="px-3 rtl my-3 my-row justify-content-between">
+                    <button class="item-btn" mat-stroked-button [ngClass]="{'selected-btn':viewMode=='test'}"
+                        (click)="viewMode=''">
+                        پوسیدگی
+                    </button>
+                    <button class="item-btn" mat-stroked-button [ngClass]="{'selected-btn':viewMode=='Fracture'}"
+                        (click)="viewMode='Fracture'">
+                        شکستگی
+                    </button>
+                    <button class="item-btn" mat-stroked-button [ngClass]="{'selected-btn':viewMode=='tooth-wear'}"
+                        (click)="viewMode='tooth-wear'">
+                        سایش دندان
+                    </button>
+                </div>
+                <div class="px-3 rtl my-3 my-row justify-content-between">
+                    <button class="item-btn" mat-stroked-button (click)="viewMode='colors'"
+                        [ngClass]="{'selected-btn':viewMode=='colors'}">
+                        تغییر رنگ
+                    </button>
+                    <button class="item-btn" mat-stroked-button (click)="viewMode='apical'"
+                        [ngClass]="{'selected-btn':viewMode=='apical'}">
+                        apical
+                    </button>
+                    <button class="item-btn" mat-stroked-button (click)="viewMode='development'"
+                        [ngClass]="{'selected-btn':viewMode=='development'}">
+                        اختلال رشد
+                    </button>
+                </div>
+                <div class="px-3 rtl my-3 w-100">
+                    <patalogy-items-detail [toothPatalogy]="toothPatalogy"  [viewMode]="viewMode" class="w-100"
+                        [selectedItem]="selectedItem"></patalogy-items-detail>
+                </div>
+            </div>
+            <div class="align-self-end pb-2 px-3 w-100">
+                <div class="row justify-content-between w-100">
+                    <div class="col-lg-4 row">
+                        <button mat-flat-button class="bottom-btn manitoring-btn" (click)="onManitoringItem()">
+                            مانیتورینگ
+                        </button>
+                    </div>
+                    <div class="col-lg-4 row">
+                        <button mat-flat-button class="bottom-btn treat-btn" (click)="onTreat()">
+                            درمان
+                        </button>
+                    </div>
+                    <div class="col-lg-4 row px-0">
+                        <button mat-flat-button class="bottom-btn save-btn" (click)="onSave()">
+                            ذخیره
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+.form-control:disabled{    
+    background-color: transparent;
+    border: none;
+}
+
+.label-caption{
+    color: rgba(0,0,0,.54);
+}
+
+.caption-horiz{
+    padding-top: 7px;
+    padding-left: 7px;
+}
+
+.tight{
+    margin-top: -15px;
+}
+
+.border-readonly {
+    border: 1px solid #ced4da !important;
+    border-radius: .25rem !important;
+    background: lightcyan !important;
+}
+
+.span-icon {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    cursor: pointer;
+    color: green;
+}
+
+
+.input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
+    border-top-right-radius: .25rem !important; 
+    border-bottom-right-radius: .25rem !important; 
+    border-top-left-radius: .25rem !important;
+   border-bottom-left-radius: .25rem !important;
+}
+
+.align-left{
+    text-align: left;
+}

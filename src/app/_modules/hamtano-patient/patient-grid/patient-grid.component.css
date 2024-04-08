@@ -1,0 +1,53 @@
+::ng-deep.k-grid td {
+    border-left: 0px !important;
+    border-right: 0px !important;
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+}
+
+::ng-deep .k-grid-content {
+    overflow-y: auto;
+}
+
+::ng-deep .k-grid-header {
+    padding: 0 !important;
+    color: gray;
+    font-size: 12px;
+}
+
+::ng-deep .k-column-title {
+    font-size: 12px;
+}
+
+.button-new {
+    background-color: #008fd6 !important;
+    color: white !important;
+    padding: 20px 20px !important;
+}
+
+
+
+.rtl {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+::ng-deep .ag-header-cell-label {
+    text-align: right !important;
+    direction: rtl !important;
+    font-family: dana !important;
+}
+
+::ng-deep .ag-cell-value {
+    text-align: right !important;
+    direction: rtl !important;
+    font-family: dana !important;
+}
+
+::ng-deep .ag-center-cols-viewport {
+    width: 10000px !important;
+}
+
+

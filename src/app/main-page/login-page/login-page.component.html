@@ -1,0 +1,28 @@
+<div class="div-main w-100 vh-100">
+    <div class="row m-0 px-0 w-100 h-100 flex-column justify-content-center align-items-center ">
+        <div class="col-lg-3">
+            <div class="login-card">
+                <div class="title px-3 text-center">
+                    سیستم دندان پزشکی همتانو
+                </div>
+                <div class="div-input p-3 mt-3">
+                    <mat-form-field class="w-100">
+                        <mat-label>نام کاربری</mat-label>
+                        <input class="username-input" matInput placeholder="" value="">
+                    </mat-form-field>
+                    <div class="div-password">
+                        <mat-form-field class="w-100">
+                            <mat-label>رمز عبور</mat-label>
+                            <input class="password-input" matInput placeholder="" value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row m-0 px-0 px-3">
+                    <button mat-button class="login-btn" [routerLink]="['/main/dashboard']">
+                        ورود
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

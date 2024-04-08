@@ -1,0 +1,16 @@
+.div-main {
+    cursor: pointer;
+
+}
+
+.custom-item {
+    padding: 5px 5px;
+}
+
+.doctor-item:hover {
+    background-color: #f5f5f5;
+}
+
+::ng-deep .k-treeview-md .k-treeview-leaf {
+    margin: 0 !important;
+}

@@ -1,0 +1,56 @@
+<div class="div-main">
+    <div class="div-header" *ngIf="isShowPatientPage">
+        <panel-haeder (openSidenavEvent)="cacheData.isSideOpen=true"></panel-haeder>
+    </div>
+    <div class="div-filters p-2" *ngIf="isShowPatientPage">
+        <button class="button-new font-12" mat-flat-button (click)="onAddnewPatient()">
+            <span class="material-icons-outlined">
+                add
+            </span>
+            <span>
+                افزودن بیمار جدید
+            </span>
+        </button>
+    </div>
+
+    <div class="div-grid rtl">
+        <kendo-grid [dir]="'rtl'" [loading]="isBusy" [height]="height" [kendoGridBinding]="patients" [data]="patients" class="rtl w-100 h-100  font-12" [loading]="false"
+            [reorderable]="true">
+            <kendo-grid-messages class="font-12" noRecords="اطلاعاتی وجود ندارد" filterEqOperator="مساوی"
+                filterNotEqOperator="مخالف" filterContainsOperator="وجود دارد" filterNotContainsOperator="وجود ندارد"
+                filterStartsWithOperator="َشروع با" filterEndsWithOperator="پایان با" filterIsNullOperator="مقدار پوچ"
+                filterIsNotNullOperator="پوچ نباشد" filterIsEmptyOperator="خالی" filterIsNotEmptyOperator="خالی نباشد"
+                filterAndLogic="و" filterOrLogic="یا" filterFilterButton="اعمال" filterClearButton="لغو"
+                filterIsTrue="تایید شده" filterIsFalse="تایید نشده"
+                groupPanelEmpty="برای گروه بندی، ستون مورد نظر را به اینجا بکشید">
+            </kendo-grid-messages>
+            <kendo-grid-column class="font-12" [width]="50" field="admCode" title="کد پذیرش">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="110" field="firstName" title="نام">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" field="lastName" [width]="110" title="نام خانوادگی">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="nationalCode" title="کد ملی">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="bimeName" title="بیمه">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="mobileNumber" title="شماره همراه">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="phone" title="شماره تماس">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="drName" title="پزشک">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="50" title="عملیات">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <div class="text-center">
+                        <button mat-button class="font-12 mat-btn36" (click)="onSelectedPatient(dataItem)">
+                            <span class="material-icons-outlined">
+                                more
+                            </span>
+                        </button>
+                    </div>
+                </ng-template>
+            </kendo-grid-column>
+        </kendo-grid>
+    </div>
+</div>

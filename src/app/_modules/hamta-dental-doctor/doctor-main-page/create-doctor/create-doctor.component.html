@@ -1,0 +1,63 @@
+<div class="div-main">
+    <div class="my-row">
+        <div class="dana-bold align-self-center">
+            اطلاعات پایه
+        </div>
+        <div class="fill ltr text-left">
+            <button mat-stroked-button class="mat-btn36" (click)="onSave()">
+                <span class="material-icons-outlined gray1">
+                    save
+                </span>
+            </button>
+            <button mat-stroked-button class="mat-btn36 mx-2 submit-color" (click)="onAddNewDoctor()">
+                <span class="material-icons-outlined ">
+                    add
+                </span>
+            </button>
+            <button mat-stroked-button class="" (click)="onOpenScheudle()">
+                <span class="gray1">
+                    ساعات حضور پزشک
+                </span>
+                <span class="material-icons-outlined gray pl-1">
+                    schedule
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="row m-0 px-0">
+        <div class="col-lg-4">
+            <hims-text-box [model]="doctor" propName="firstName" caption="نام"></hims-text-box>
+        </div>
+        <div class="col-lg-4">
+            <hims-text-box [model]="doctor" propName="lastName" caption="نام خانوادگی"></hims-text-box>
+        </div>
+        <div class="col-lg-4">
+            <hims-text-box [model]="doctor" propName="nezamCode" caption="کد نظام پزشکی"></hims-text-box>
+        </div>
+    </div>
+    <div class="row m-0 px-0 pt-2">
+        <div class="col-lg-4">
+            <hims-text-box caption="کد ملی"></hims-text-box>
+        </div>
+        <div class="col-lg-4">
+            <date-picker (dateValueEvent)="doctor.birthDate=$event" caption="تاریخ تولد"></date-picker>
+        </div>
+        <div class="col-lg-4">
+            <hims-text-box [model]="doctor" propName="phoneNumber" caption="شماره همراه"></hims-text-box>
+        </div>
+    </div>
+    <div class="row m-0 px-0 pt-2">
+        <div class="col-lg-4">
+            <hims-text-box [model]="doctor" propName="phone" caption="شماره ثابت"></hims-text-box>
+        </div>
+        <div class="col-lg-4">
+            <hims-combo-box [value]="doctor.drExpert" [dataSource]="cacheData.drExpertList"
+                (valueChangeEvent)="doctor.drExpert=$event" caption="تخصص"></hims-combo-box>
+        </div>
+    </div>
+    <div class="row m-0 px-0 pt-2">
+        <div class="col-lg-12">
+            <hims-text-box [model]="doctor" propName="address" caption="آدرس"></hims-text-box>
+        </div>
+    </div>
+</div>

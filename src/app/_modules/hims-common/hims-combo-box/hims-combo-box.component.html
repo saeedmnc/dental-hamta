@@ -1,0 +1,25 @@
+<div class="div-main">
+    <div *ngIf="!isCaptionHoriz" class="rtl text-right">
+        <label for="combo" class="caption rtl text-right pb-1" *ngIf="!isHideCaption">
+            {{caption}}
+        </label>
+        <div>
+            <ng-select [multiple]="isMultiSelect" (change)="onChange()" [placeholder]="placeHolder" #combo
+                [items]="dataSource" class="combo-box font-12" bindLabel="name" bindValue="code" [(ngModel)]="value">
+            </ng-select>
+        </div>
+    </div>
+
+    <div class="my-row" *ngIf="isCaptionHoriz">
+        <div>
+            <label for="combo" class="caption caption-horiz   rtl  text-right">
+                {{caption}}
+            </label>
+        </div>
+        <div class="fill">
+            <ng-select (change)="onChange()" #combo [items]="dataSource" class="combo-box font-12" bindLabel="name"
+                bindValue="code" [(ngModel)]="value">
+            </ng-select>
+        </div>
+    </div>
+</div>

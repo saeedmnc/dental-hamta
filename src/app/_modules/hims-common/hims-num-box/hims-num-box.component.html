@@ -1,0 +1,18 @@
+<div class="form-group" [hidden]="isHidden()" [ngStyle]="{'width.px': width}" [ngClass]="{'w-100': isFullWidth}">
+    <label for="tbValue" class="caption pb-1" *ngIf="!isHideCaption && !isCaptionHoriz"> {{ caption }}</label>
+    <div class="input-group">
+        <label for="tbValue" class="caption caption-horiz" [ngClass]="{'align-left': isCaptionLeft}"
+            [ngStyle]="{'width.px': captionWidth,'fontSize.px': captionFontSize}"
+            *ngIf="!isHideCaption && isCaptionHoriz">
+            {{ caption }}
+        </label>
+        <input type="text" [disabled]="modeView || isReadOnly" class="form-control" [(ngModel)]="value" #tbValue
+            autocomplete="new-fieldname"
+            [ngClass]="{notValid:!isValid,'form-edit-readonly-with-border': isReadOnlyBorder && isReadOnly, 'form-control-sm': isSmall, 'mode-view':modeView}"
+            min="{{min}}" max="{{max}}" title="{{ caption }}" (focus)="onFocus()" (change)="onValueChanged()"
+            (blur)="onBlur()" (keyup)="onKeydown($event)" [ngStyle]="{'fontSize.px': fontSize}" [placeholder]="placeholder"/>
+        <span class="material-icons-outlined-thin span-icon" *ngIf="materialIcon" [matTooltip]="iconHint">
+            {{materialIcon}}
+        </span>
+    </div>
+</div>

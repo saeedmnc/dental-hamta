@@ -1,0 +1,12 @@
+.side-nav{
+    width: 3%;
+    background-color: #008fd6;
+}
+
+.div-item{
+    cursor: pointer;
+}
+
+.background-main{
+    background-color: #f1f4f7;
+}

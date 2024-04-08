@@ -1,0 +1,26 @@
+<div class="div-main ltr" *ngIf="tooth.isUpperJaw">
+    <div class="ltr text-left">
+        <img class="upper-img" [src]="'assets/tooth/'+tooth.upperImgSrc+'.png'" alt="">
+    </div>
+    <div class="ltr text-left">
+        <img class="front-img" [src]="'assets/tooth/'+tooth.frontImg+'.png'" alt="">
+    </div>
+    <div class="mt-2 text-center text-light">
+        {{tooth.toothNum}}
+    </div>
+    <div>
+    </div>
+</div>
+<div class="div-main ltr" *ngIf="!tooth.isUpperJaw">
+    <div class="mt-2 text-center text-light">
+        {{tooth.toothNum}}
+    </div>
+    <div class="ltr text-left">
+        <img class="front-img" [src]="'assets/tooth/'+tooth.frontImg+'.png'" alt="">
+    </div>
+    <div class="ltr text-left">
+        <img class="lower-image" [src]="'assets/tooth/'+tooth.upperImgSrc+'.png'" alt="">
+    </div>
+    <div>
+    </div>
+</div>

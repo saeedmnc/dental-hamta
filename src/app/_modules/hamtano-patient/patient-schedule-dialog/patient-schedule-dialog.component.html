@@ -1,0 +1,120 @@
+<div class="div-main">
+    <div class="div-row">
+        <div class="div-header px-2 my-row py-2">
+            <div class="caption fill">
+                نام دکتر:{{doctorSchedule.drName}}
+            </div>
+            <div class="caption">
+                تاریخ : {{doctorSchedule.scheduleDate}}
+            </div>
+        </div>
+        <div class="my-row">
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" [scheduleType]="1" [selectedTime]="selectedTime"
+                    time="00:00 - 01:00"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" [scheduleType]="2" [selectedTime]="selectedTime"
+                    time="01:00-02:00"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" [scheduleType]="3" [selectedTime]="selectedTime"
+                    time="02:00-03:00"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" [scheduleType]="4" [selectedTime]="selectedTime"
+                    time="03:00-04:00"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" [scheduleType]="5" [selectedTime]="selectedTime"
+                    time="04:00-05:00"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" [scheduleType]="6" [selectedTime]="selectedTime"
+                    time="05:00-06:00"></time-line-item>
+            </div>
+        </div>
+        <div class="my-row">
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="07:00 - 08:00" [scheduleType]="7"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="08:00-09:00" [scheduleType]="8"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="09:00-10:00" [scheduleType]="9"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="10:00-11:00" [scheduleType]="10"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="11:00-12:00" [scheduleType]="11"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="12:00-13:00" [scheduleType]="12"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+        </div>
+        <div class="my-row">
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="13:00-14:00" [scheduleType]="13"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="14:00-15:00" [scheduleType]="14"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="15:00-16:00" [scheduleType]="15"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="16:00-17:00" [scheduleType]="16"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="17:00-18:00" [scheduleType]="17"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="18:00-19:00" [scheduleType]="18"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+        </div>
+        <div class="my-row">
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="19:00-20:00" [scheduleType]="19"
+                    [selectedTime]="selectedTime"></time-line-item>
+
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="20:00-21:00" [scheduleType]="20"
+                    [selectedTime]="selectedTime"></time-line-item>
+
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="21:00-22:00" [scheduleType]="21"
+                    [selectedTime]="selectedTime"></time-line-item>
+
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="22:00-23:00" [scheduleType]="22"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+            <div class="div-time">
+                <time-line-item [shiftType]="doctorSchedule.shiftType" time="23:00-24:00" [scheduleType]="23"
+                    [selectedTime]="selectedTime"></time-line-item>
+            </div>
+        </div>
+        <div class="py-3 text-center">
+            <button mat-button class="submit-btn" (click)="onSubmit()">
+                تایید
+            </button>
+        </div>
+    </div>
+</div>

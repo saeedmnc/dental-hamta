@@ -1,0 +1,49 @@
+<div class="div-main">
+    <div class="div-grid rtl">
+        <kendo-grid [dir]="'rtl'" [height]="285" [loading]="isBusy" [kendoGridBinding]="doctors" [data]="doctors"
+            class="rtl w-100 font-12" [reorderable]="true">
+            <kendo-grid-messages class="font-12" noRecords="اطلاعاتی وجود ندارد" filterEqOperator="مساوی"
+                filterNotEqOperator="مخالف" filterContainsOperator="وجود دارد" filterNotContainsOperator="وجود ندارد"
+                filterStartsWithOperator="َشروع با" filterEndsWithOperator="پایان با" filterIsNullOperator="مقدار پوچ"
+                filterIsNotNullOperator="پوچ نباشد" filterIsEmptyOperator="خالی" filterIsNotEmptyOperator="خالی نباشد"
+                filterAndLogic="و" filterOrLogic="یا" filterFilterButton="اعمال" filterClearButton="لغو"
+                filterIsTrue="تایید شده" filterIsFalse="تایید نشده"
+                groupPanelEmpty="برای گروه بندی، ستون مورد نظر را به اینجا بکشید">
+            </kendo-grid-messages>
+            <kendo-grid-column class="font-12" [width]="50" field="code" title="کد پذیرش">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="110" field="firstName" title="نام">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" field="lastName" [width]="110" title="نام خانوادگی">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="nezamCode" title="کد نظام پزشکی">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="expertName" title="تخصص">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="phoneNumber" title="شماره همراه">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="phone" title="شماره ثابت">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="birthDate" title="تاریخ تولد">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="70" field="birthDate" title="کد ملی">
+            </kendo-grid-column>
+            <kendo-grid-column class="font-12" [width]="50" title="عملیات">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <div class="text-center">
+                        <button mat-button class="font-12 mat-btn32">
+                            <span class="material-icons-outlined">
+                                delete
+                            </span>
+                        </button>
+                        <button mat-button class="font-12 mat-btn36">
+                            <span class="material-icons-outlined">
+                                edit
+                            </span>
+                        </button>
+                    </div>
+                </ng-template>
+            </kendo-grid-column>
+        </kendo-grid>
+    </div>
+</div>

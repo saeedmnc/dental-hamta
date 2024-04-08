@@ -1,0 +1,16 @@
+.div-degree {
+    height: 10px;
+    border: 1px solid lightgray;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.div-good {
+    width: 33.33%;
+}
+
+.div-value {
+    background: rgb(230, 7, 19);
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(230, 7, 19, 1) 0%, rgba(224, 211, 8, 1) 35%, rgba(240, 222, 10, 1) 62%, rgba(206, 255, 0, 1) 100%);
+}

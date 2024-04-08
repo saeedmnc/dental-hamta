@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "./assets/styles/lnr.css";
+@import "./assets/styles/fonts.css";
+@import "./assets/styles/hims.css";
+@import "./assets/styles/spaces.css";
+@import "./assets/styles/dropdown-menu-styles.css";
+@import "./assets/styles/material-icon.css";
+@import "./assets/styles/font-awesome.css";
+@import "./assets/styles/kendo-grid.css";
+@import "./assets/styles/media.css";
+@import "@progress/kendo-theme-default/dist/all.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "./assets/styles/colors.css";
+@import 'ag-grid-community/styles/ag-grid.css';
+/* Quartz Theme Specific CSS */
+@import 'ag-grid-community/styles/ag-theme-quartz.css';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: dana !important;
+}
+
+.btn-submit {
+    background-color: #412afb !important;
+    color: white !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.my-card {
+    --tw-shadow-color: rgba(112, 144, 176, .08);
+    --tw-shadow: var(--tw-shadow-colored);
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.no-shadow-card {
+    border: 1px solid lightgray !important;
+    box-shadow: none !important;
+}
+
+.icon-23 {
+    width: 23px !important;
+    height: 23px !important;
+}
+
+.icon-25 {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.icon-30 {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+/* .icon-23{
+    width: 23px!important;
+    height: 23px!important;
+} */
+
+.submit-btn {
+    background-color: #008fd6 !important;
+    color: white !important;
+    padding: 20px 20px !important;
+}
+
+.cancel-btn {
+    background-color: #e94560 !important;
+    color: white !important;
+    padding: 20px 20px !important;
+}
+
+.submit-color {
+    background-color: #008fd6 !important;
+    color: white !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

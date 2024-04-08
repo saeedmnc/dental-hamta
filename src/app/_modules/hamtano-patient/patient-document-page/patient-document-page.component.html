@@ -1,0 +1,35 @@
+<div class="div-main h-100 rtl">
+    <div class="div-main h-100 w-100">
+        <mat-sidenav-container autosize class="w-100 h-100 bg-main">
+
+            <mat-sidenav #sidenav mode="side" [opened]="true" position="end"
+                class="side-nav px-2  lg-visible md-hide sm-hide" #drawer>
+                <div class="div-item">
+                    <span class="material-icons-outlined text-light">
+                        navigate_before
+                    </span>
+                </div>
+                <div class="div-item mt-2 pb-2" [routerLink]="['/main/patients/document/profile']">
+                    <span class="material-icons-outlined text-light">
+                        person
+                    </span>
+                </div>
+                <div class="div-item mt-2 pb-2" [routerLink]="['/main/patients/document/chart']">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24">
+                        <path
+                            d="M18 14.9c-.3 2.5-1.5 4.5-3 4.5s-2.7-1.9-3-4.5c-.3 2.5-1.5 4.5-3 4.5s-2.7-2-3-4.5c-.2 1.9-1.1 3.3-2.3 3.3-1.3 0-2.3-1.8-2.3-4 .1-.6 1.1-1 2.3-1 1.1 0 2.1.4 2.2.9.3-.7 1.5-1.2 3-1.2s2.7.5 2.9 1.2c.3-.7 1.5-1.2 3-1.2s2.7.5 2.9 1.2c.2-.5 1.2-.9 2.3-.9 1.2 0 2.2.4 2.3 1v.1c0 2.2-1 3.9-2.3 3.9-.9-.1-1.8-1.5-2-3.3zM5.3 9.8c.3-2.9 1.6-5.1 3.3-5.1s3.2 2.2 3.3 5.1c.3-2.8 1.6-5.1 3.3-5.1s3.2 2.2 3.4 5.1C19 7.6 20.1 6 21.3 6c1.5 0 2.7 2.1 2.7 4.6-.1.7-1.3 1.2-2.7 1.2-1.3 0-2.4-.4-2.6-1-.3.8-1.7 1.4-3.4 1.4s-3.1-.6-3.3-1.4c-.3.8-1.7 1.4-3.4 1.4-1.6 0-3.1-.6-3.3-1.4-.3.6-1.4 1-2.7 1-1.4 0-2.6-.5-2.6-1.2v-.1C0 8.1 1.2 6 2.7 6c1.3.1 2.4 1.6 2.6 3.8z" />
+                    </svg>
+                </div>
+
+                <!-- <hamtano-side-nav></hamtano-side-nav> -->
+            </mat-sidenav>
+            <mat-sidenav-content class="background-main">
+                <div class="w-100 h-100 overflow-y flex-column">
+                    <div class="div-route h-100">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</div>

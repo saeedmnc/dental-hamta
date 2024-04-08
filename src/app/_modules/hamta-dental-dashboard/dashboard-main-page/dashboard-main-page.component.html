@@ -1,0 +1,89 @@
+<div class="div-main">
+    <div>
+        <panel-haeder (openSidenavEvent)="cacheData.isSideOpen=true"></panel-haeder>
+    </div>
+    <div class="div-charts m-0 px-0">
+        <div class="row m-0 px-0 mt-3">
+            <div class="col-lg-3">
+                <chart-card-item [view]="[300,150]" caption="تعداد بیماران به تفکیک جنسیت" [isBusy]="isBusy"
+                    [chartData]="genderChartData" [chartType]="1"></chart-card-item>
+            </div>
+            <div class="col-lg-6">
+                <chart-card-item [chartType]="2" [view]="[600,180]" [chartData]="doctorPatientList" [isBusy]="isBusy"
+                    caption="تعداد بیماران پذیرش شده به تفکیک پزشک"></chart-card-item>
+            </div>
+            <div class="col-lg-3 flex-column overflow-y justify-content-between h-auto ">
+                <div>
+                    <mat-card class="no-shadow-card">
+                        <mat-card-content>
+                            <div class="my-row justify-content-between m-0 px-0 caption">
+                                <div class="fill align-self-center">
+                                    قرار ملاقات های امروز
+                                </div>
+                                <div class="align-self-end">
+                                    <button matTooltip="مشاهده" mat-icon-button class="mat-btn36"
+                                        (click)="onOpenTodaySchedule()">
+                                        <span class="material-icons-outlined  gray1">
+                                            more
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-3 my-row justify-content-between">
+                                <div class="flex-row">
+                                    <span class="gray material-icons-outlined text-warning">
+                                        meeting_room
+                                    </span>
+                                    <span class="gray1 align-self-end">
+                                        کل قرار های امروز: ۲۰
+                                    </span>
+                                </div>
+                                <div class="flex-row text-left">
+                                    <span class="material-icons-outlined text-success">
+                                        check
+                                    </span>
+                                    <span class="gray align-self-end">
+                                        قرار های انجام شده : ۸
+                                    </span>
+
+
+                                </div>
+
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="">
+                    <mat-card class="no-shadow-card h-100">
+                        <mat-card-content class="">
+                            <div class="row m-0 px-0 caption ">
+                                مقدار دریافتی امروز
+                            </div>
+                            <div class="mt-3 flex-row text-left ltr">
+                                <span class="material-icons-outlined text-danger">
+                                    attach_money
+                                </span>
+                                <span class="align-self-end font-18">
+                                    2,500,000
+                                </span>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+
+            </div>
+        </div>
+        <div class="row m-0 px-0 mb-3">
+            <div class="my-3 dana-bold px-4 flex-row">
+                <span class="material-icons-outlined">
+                    view_list
+                </span>
+                <span class="mx-2 align-self-end">
+                    لیست بیماران امروز
+                </span>
+            </div>
+            <patient-grid [height]="276" [isShowPatientPage]="false"></patient-grid>
+        </div>
+
+    </div>
+</div>

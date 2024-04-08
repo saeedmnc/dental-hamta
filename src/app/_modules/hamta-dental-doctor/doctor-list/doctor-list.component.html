@@ -1,0 +1,14 @@
+<div class="div-main">
+    <div>
+        <input type="text" class="form-control px-2 mb-1 font-12" placeholder="جستجو" [(ngModel)]="searchText">
+        <kendo-treeview [nodes]="expertListTreeview" textField="name" kendoTreeViewHierarchyBinding
+            kendoTreeViewSelectable (selectionChange)="onSlelectedDoctor($event)"  childrenField="doctors" kendoTreeViewExpandable class="rtl h-100 w-100"
+            [filter]="searchText" [expandOnFilter]="true">
+            <ng-template kendoTreeViewNodeTemplate let-dataItem>
+                <div class="my-row font-12">
+                    {{dataItem.name}}
+                </div>
+            </ng-template>
+        </kendo-treeview>
+    </div>
+</div>

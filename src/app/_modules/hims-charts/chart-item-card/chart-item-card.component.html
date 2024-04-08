@@ -1,0 +1,121 @@
+<div class="div-main">
+    <mat-card class="my-card" [ngClass]="{'bg-noData':data.length==0}">
+        <mat-card-content>
+            <hims-loading-progress *ngIf="isBusy"></hims-loading-progress>
+            <div *ngIf="!isBusy">
+                <div class=" gray1 div-name text-right pb-3" *ngIf="!isBusy">
+                    {{chart.name}}
+                </div>
+                <div *ngIf="data.length>0">
+                    <div *ngIf="chart.typeIX==1">
+                        <chart-bar-horizental [showXAxis]="isShowAxis" [showYAxis]="chart.isShowAxis"
+                            [colorScheme]="colorScheme" [gradient]="chart.isGradiant" [view]="view"
+                            [cahrtData]="data"></chart-bar-horizental>
+                    </div>
+                    <div *ngIf="chart.typeIX==3">
+                        <chart-bar-vertical [showXAxis]="isShowAxis" [showYAxis]="chart.isShowAxis"
+                            [colorScheme]="colorScheme" [gradient]="chart.isGradiant" [view]="view"
+                            [cahrtData]="data"></chart-bar-vertical>
+                    </div>
+                    <div *ngIf="chart.typeIX==2" class="w-100 d-flex justify-content-center">
+                        <chart-pie [showLabels]="chart.isLabel" [isDoughnut]="chart.isDonut" [colorScheme]="colorScheme"
+                            [gradient]="chart.isGradiant" [view]="view" [cahrtData]="data"></chart-pie>
+                    </div>
+                    <div *ngIf="chart.typeIX==4">
+                        <chart-pie-grid [colorScheme]="colorScheme" [view]="view" [cahrtData]="data"></chart-pie-grid>
+                    </div>
+                    <div *ngIf="chart.typeIX==5">
+                        <chart-gauge [colorScheme]="colorScheme" [view]="view" [cahrtData]="data"></chart-gauge>
+                    </div>
+                    <div *ngIf="chart.typeIX==6">
+                        <chart-pie-advance [colorScheme]="colorScheme" [view]="view"
+                            [cahrtData]="data"></chart-pie-advance>
+                    </div>
+                    <div *ngIf="chart.typeIX==7">
+                        <chart-number-box [chartData]="data"></chart-number-box>
+                    </div>
+                </div>
+                <div *ngIf="data.length==0" class="my-row m-0 px-0 justify-content-center align-items-center">
+                    <div class="div-no-image  text-center pt-4">
+                        <img src="assets/images/not-found/NoData.png" class="w-100" alt="">
+                    </div>
+                    <div class="text-center w-100 font-12  pt-3 ran-sans-bold text-primary">
+                        ...اطلاعاتی یافت نشد
+                    </div>
+                </div>
+
+            </div>
+
+        </mat-card-content>
+        <div class="more-btn" *ngIf="!isBusy && data.length>0 && chart.typeIX!=7">
+            <div>
+                <button mat-button (click)="onShowOptions()" class="mat-btn36">
+                    <span class="material-icons-outlined" *ngIf="!isShowOptions">
+                        expand_more
+                    </span>
+                    <span class="material-icons-outlined" *ngIf="isShowOptions">
+                        expand_less
+                    </span>
+                </button>
+            </div>
+            <div class="pt-2 text-center" *ngIf="isShowOptions">
+                <button mat-icon-button color="primary" class=" mat-btn24" (click)="onPreview()">
+                    <span class="material-icons-outlined">
+                        fullscreen
+                    </span>
+                </button>
+            </div>
+            <div class="pt-2 text-center" *ngIf="isShowOptions && (chart.typeIX==1 || chart.typeIX==3)">
+                <button mat-icon-button color="primary" class=" mat-btn24" (click)="onToggleAxis()">
+                    <span class="material-icons-outlined">
+                        line_axis
+                    </span>
+                </button>
+            </div>
+            <div class="pt-2 text-center" *ngIf="isShowOptions">
+                <button mat-icon-button color="primary" class=" mat-btn24" [matMenuTriggerFor]="palleteMenu">
+                    <span class="material-icons-outlined">
+                        palette
+                    </span>
+                </button>
+            </div>
+            <div class="pt-2 text-center" *ngIf="isShowOptions && chart.typeIX==2">
+                <button mat-icon-button color="primary" class=" mat-btn24" (click)="onToggleDonut()">
+                    <span class="material-icons-outlined">
+                        donut_large
+                    </span>
+                </button>
+            </div>
+            <div class="pt-2 text-center" *ngIf="isShowOptions && chart.typeIX==2">
+                <button mat-icon-button color="primary" class=" mat-btn24" (click)="onToggleLabel()">
+                    <span class="material-icons-outlined">
+                        schema
+                    </span>
+                </button>
+            </div>
+            <div class="pt-2 text-center" *ngIf="isShowOptions">
+                <button mat-icon-button color="primary" class=" mat-btn24" (click)="onChangeGradient()">
+                    <span class="material-icons-outlined">
+                        gradient
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="div-code">
+            <div>
+                <button mat-button [matTooltip]="'کد نمودار'" class="mat-btn36">
+                    <span class="material-icons-outlined gray1">
+                        contact_support
+                    </span>
+
+                </button>
+            </div>
+        </div>
+    </mat-card>
+    <mat-menu #palleteMenu="matMenu">
+        <div mat-menu-item class="font-12" (click)="onSelectTheme(item)"
+            *ngFor="let item of baseData.chartThemePalette">
+            {{item.name}}
+        </div>
+    </mat-menu>
+</div>

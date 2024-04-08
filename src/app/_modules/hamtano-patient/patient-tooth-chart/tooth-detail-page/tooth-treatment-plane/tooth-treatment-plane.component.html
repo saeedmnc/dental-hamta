@@ -1,0 +1,38 @@
+<div class="div-main  ">
+    <mat-tab-group class="">
+        <mat-tab label="طرح های درمانی">
+            <div class="" style="max-height: 199px;">
+                <div *ngFor="let item of toothDoc.patalogy"
+                    [ngClass]="{'border-yellow':item.status==1,'border-red':item.status==2}"
+                    class="div-item my-row text-right rtl m-2">
+                    <div class="rtl text-right fill align-self-center">
+                        {{item.toothNom}}, {{item.name}} ,
+                        <span *ngIf="item.name=='رنگ'">
+                            {{patalogyBaseData.getColorName(item.code)}}
+                        </span>
+                        <span *ngIf="item.name=='apical'">
+                            {{patalogyBaseData.getApicalName(item.code)}}
+                        </span>
+                        <span *ngIf="item.name=='سایش'">
+                            {{patalogyBaseData.getToothWearName(item.code)}}
+                        </span>
+                        <span *ngIf="item.name=='اختلال رشد'">
+                            {{patalogyBaseData.getDevelopmentName(item.code)}}
+                        </span>
+                        <span *ngIf="item.name=='شکستگی'">
+                            {{patalogyBaseData.getFractureName(item.code)}}
+                        </span>
+                    </div>
+                    <div>
+                        <button mat-stroked-button class="mat-btn36 ">
+                            <span class="material-icons-outlined gray1">
+                                check
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="سابقه درمانی"> Content 2 </mat-tab>
+    </mat-tab-group>
+</div>

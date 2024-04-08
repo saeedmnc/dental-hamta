@@ -1,0 +1,49 @@
+<div class="div-main my-row w-100">
+
+    <div class="my-row ltr fill vh-100 ">
+        <div class="wheel-teeth my-row justify-content-start ltr">
+            <div class="div-counter  h-100  text-left">
+                <div (click)="onSelectedTooth(item)" class="text-center div-item px-2" *ngFor="let item of teethList"
+                    [ngClass]="{'text-light':cacheData.selectedTooth.toothNum==item}">
+                    {{item}}
+                </div>
+            </div>
+            <div class="my-row fill h-100">
+                <tooth-wheel-selector [tooth]="cacheData.selectedTooth"></tooth-wheel-selector>
+            </div>
+        </div>
+        <div class="h-100 fill overflow-y flex-column">
+            <mat-sidenav-container [autofocus]="false" autosize class="w-100 h-100 bg-main">
+                <mat-sidenav #sidenav [autoFocus]="false" mode="over" [opened]="isOpen" position="start"
+                    class="side-nav   lg-visible md-hide sm-hide" #drawer>
+
+                    <tooth-patalogy-page [viewMode]="viewMode" [toothPatalogy]="toothPatalogy" [toothDoc]="toothDoc"
+                        (closeEvent)="isOpen=false" *ngIf="selectedTreat==1"></tooth-patalogy-page>
+                </mat-sidenav>
+                <mat-sidenav-content class="background-main">
+                    <div class="w-100 h-100 overflow-y flex-column">
+                        <div class="div-route h-100">
+                            <div class="h-45">
+                                <tooth-treatments-part
+                                    (selectedTreatEvent)="onselectedTreat($event)"></tooth-treatments-part>
+                                <tooth-treatment-plane [toothDoc]="toothDoc"></tooth-treatment-plane>
+                            </div>
+                            <div class="h-50 w-100 ">
+                                <div class="row m-0 px-0">
+                                    <div class="col-lg-6  px-0">
+                                        <cold-test-items *ngIf="selectedItem==1"></cold-test-items>
+                                        <percussion-test-item *ngIf="selectedItem==2"></percussion-test-item>
+                                    </div>
+                                    <div class="col-lg-6  px-0">
+                                        <tooth-endodontic-selector
+                                            (selectedItemEvent)="selectedItem=$event"></tooth-endodontic-selector>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-sidenav-content>
+            </mat-sidenav-container>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<mat-card class="no-shadow-card">
+    <mat-card-content>
+        <div class="div-main">
+            <div class="div-grid">
+                <kendo-grid [group]="group" [dir]="'rtl'" [groupable]="true" [kendoGridBinding]="servicesItem" [data]="servicesItem"
+                    class="rtl w-100 h-100  font-12" [loading]="false" [reorderable]="true">
+                    <kendo-grid-messages class="font-12" noRecords="اطلاعاتی وجود ندارد" filterEqOperator="مساوی"
+                        filterNotEqOperator="مخالف" filterContainsOperator="وجود دارد"
+                        filterNotContainsOperator="وجود ندارد" filterStartsWithOperator="َشروع با"
+                        filterEndsWithOperator="پایان با" filterIsNullOperator="مقدار پوچ"
+                        filterIsNotNullOperator="پوچ نباشد" filterIsEmptyOperator="خالی"
+                        filterIsNotEmptyOperator="خالی نباشد" filterAndLogic="و" filterOrLogic="یا"
+                        filterFilterButton="اعمال" filterClearButton="لغو" filterIsTrue="تایید شده"
+                        filterIsFalse="تایید نشده" groupPanelEmpty="برای گروه بندی، ستون مورد نظر را به اینجا بکشید">
+                    </kendo-grid-messages>
+                    <kendo-grid-column class="font-12" [width]="110" field="name" title="نام خدمت">
+                    </kendo-grid-column>
+                    <kendo-grid-column class="font-12" [width]="110" field="groupName" title="گروه خدمتی">
+                    </kendo-grid-column>
+                    <kendo-grid-column class="font-12" field="description" [width]="150" title="شرح خدمت">
+                    </kendo-grid-column>
+                    <kendo-grid-column class="font-12" [width]="70" field="servicePrice" title="قیمت خدمت">
+                    </kendo-grid-column>
+                    <kendo-grid-column class="font-12" [width]="70" field="priceOfMaterial" title="هزینه مواد مصرفی">
+                    </kendo-grid-column>
+                    <kendo-grid-column class="font-12" [width]="50" title="عملیات">
+                        <ng-template kendoGridCellTemplate let-dataItem>
+                            <div class="text-center">
+                                <button mat-button class="font-12 mat-btn36">
+                                    <span class="material-icons-outlined gray" (click)="onEdit(dataItem)">
+                                        edit
+                                    </span>
+                                </button>
+                            </div>
+                        </ng-template>
+                    </kendo-grid-column>
+                </kendo-grid>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

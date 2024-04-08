@@ -1,0 +1,120 @@
+@font-face {
+    font-family: iransans;
+    src: url(src/assets/fonts/iran-sans/iran-sans.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: dana;
+    src: url(src/assets/fonts/farsi-fonts/dana-400.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: dana-bold;
+    src: url(src/assets/fonts/farsi-fonts/dana-700.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: iran-sans;
+    src: url(src/assets/fonts/iran-sans/iran-sans.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: iran-sans-bold;
+    src: url(src/assets/fonts/iran-sans/iran-sans-bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'linear-icon';
+    src: url(src/assets/fonts/linear/linearicons.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: iran-sans-english;
+    src: url(src/assets/fonts/iran-sans/iran-sans-english.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: iran-sans-english-bold;
+    src: url(src/assets/fonts/iran-sans/iran-sans-english-bold.ttf) format("truetype");
+}
+
+.iran-sans {
+    font-family: 'iran-sans';
+}
+
+.dana {
+    font-family: 'dana' !important;
+}
+
+.dana-bold {
+    font-family: 'dana-bold' !important;
+}
+
+.iran-sans-bold {
+    font-family: 'iran-sans-bold';
+}
+
+.font-regular {
+    font-weight: normal !important;
+}
+
+.font-10 {
+    font-size: 10px;
+}
+
+.font-11 {
+    font-size: 11px;
+}
+
+.font-12 {
+    font-size: 12px !important;
+}
+
+.font-13 {
+    font-size: 13px;
+}
+
+.font-14 {
+    font-size: 14px !important;
+}
+
+.font-15 {
+    font-size: 15px;
+}
+
+.font-16 {
+    font-size: 16px !important;
+}
+
+.font-18 {
+    font-size: 18px !important;
+}
+
+.font-20 {
+    font-size: 20px !important;
+}
+
+.font-22 {
+    font-size: 22px !important;
+}
+
+.font-24 {
+    font-size: 24px !important;
+}
+
+.font-28 {
+    font-size: 28px !important;
+}
+
+.font-30 {
+    font-size: 30px !important;
+}
+
+.font-32 {
+    font-size: 32px !important;
+}
+
+.font-80 {
+    font-size: 80px !important;
+}

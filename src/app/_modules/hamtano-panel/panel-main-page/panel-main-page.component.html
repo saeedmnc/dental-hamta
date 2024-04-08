@@ -1,0 +1,17 @@
+<div class="div-main rtl">
+    <div class="div-main vh-100 w-100">
+        <mat-sidenav-container [autofocus]="false" autosize class="w-100 h-100 bg-main">
+            <mat-sidenav  #sidenav mode="over" [opened]="cacheData.isSideOpen" (closed)="cacheData.isSideOpen=false"
+                position="start" class="side-nav px-2  lg-visible md-hide sm-hide" #drawer>
+                <hamtano-side-nav></hamtano-side-nav>
+            </mat-sidenav>
+            <mat-sidenav-content class="background-main">
+                <div class="w-100 h-100 overflow-y flex-column">
+                    <div class="div-route h-100">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</div>

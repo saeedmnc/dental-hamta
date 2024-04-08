@@ -1,0 +1,62 @@
+<div class="div-main">
+    <div class="my-row my-3 px-3">
+        <div class="dana-bold align-self-center">
+            حضور پزشک
+        </div>
+        <div class="fill text-left">
+            <div class="schedule-type">
+                <button mat-stroked-button class="mat-btn36 gray1" (click)="onCancel()">
+                    <span class="material-icons-outlined gray">
+                        close
+                    </span>
+                </button>
+                <!-- <mat-button-toggle-group [(ngModel)]="scheudleDayType" class="font-12">
+                    <mat-button-toggle [checked]="scheudleDayType==1" value="1">روز مشخص</mat-button-toggle>
+                    <mat-button-toggle [checked]="scheudleDayType==2" value="2">هفتگی</mat-button-toggle>
+                </mat-button-toggle-group> -->
+            </div>
+        </div>
+    </div>
+    <div class="div-calender mt-2 px-3" *ngIf="scheudleDayType==1 ">
+        <hamta-persian-calender [doctorCode]="doctorCode" (selectedDayEvent)="onSelectedDay($event)"
+            [scheduels]="doctorSchedule"></hamta-persian-calender>
+    </div>
+    <!-- <div class="div-week my-row" *ngIf="scheudleDayType==2">
+        <div class="">
+            <mat-button-toggle-group [multiple]="true" [vertical]="true" class="font-12">
+                <mat-button-toggle *ngFor="let day of baseData.daysList"
+                    value="{{day.code}}">{{day.name}}</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+        <div class="fill ltr pr-3">
+            <div>
+                <hims-combo-box [dataSource]="cacheData.shiftList" caption="تعیین شیفت"></hims-combo-box>
+            </div>
+            <div class=" mt-2 text-center" *ngIf="selectedScheduleType==1 && scheudleDayType==2">
+                <hims-combo-box [isMultiSelect]="true" caption="انتخاب پزشکان"
+                    [dataSource]="cacheData.drList"></hims-combo-box>
+            </div>
+        </div>
+    </div>
+    <div class="my-row mt-2 text-center">
+        <button mat-flat-button *ngIf="selectedScheduleType==0" class="submit-color" (click)="onSelectedScheculeType()">
+            انتخاب گروهی
+        </button>
+        <button mat-flat-button *ngIf="selectedScheduleType==1" class="submit-color" (click)="onSelectedScheculeType()">
+            انتخاب فردی
+        </button>
+
+    </div>
+    <div class="">
+        <div class="caption  pb-1">
+            تعداد
+        </div>
+        <div class="col-lg-3">
+            <input class="form-control" type="number">
+        </div>
+    </div>
+    <div class=" mt-2 text-center" *ngIf="selectedScheduleType==1 && scheudleDayType==1">
+        <hims-combo-box [isMultiSelect]="true" caption="انتخاب پزشکان" [dataSource]="cacheData.drList"></hims-combo-box>
+    </div> -->
+
+</div>

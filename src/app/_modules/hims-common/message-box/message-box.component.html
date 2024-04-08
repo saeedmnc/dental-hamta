@@ -1,0 +1,30 @@
+<div class="div-main p-4">
+    <div class="ltr text-left">
+        <button mat-button class="mat-btn22" (click)="onClose()">
+            <span class="material-icons-outlined">
+                close
+            </span>
+        </button>
+    </div>
+    <div class="div-title font-14">
+        {{data.title}}
+    </div>
+    <div class="font-10 pt-2 gray">
+        لطفا با پشتیبانی تماس بگیرید
+        .
+    </div>
+    <div class="pt-3 ltr text-left">
+        <button mat-button class="mat-btn22" (click)="onShowMore()">
+            <span class="material-icons-outlined font-22" *ngIf="!isShowMore">
+                expand_more
+            </span>
+            <span class="material-icons-outlined font-22" *ngIf="isShowMore">
+                expand_less
+            </span>
+        </button>
+
+    </div>
+    <div class="pt-3 div-massage gray1 text-left" *ngIf="isShowMore">
+        {{data.message}}
+    </div>
+</div>

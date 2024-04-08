@@ -1,0 +1,20 @@
+<div class="div-main">
+    <div class="div-profile ">
+        <div class="text-center mt-5">
+            <img class="div-img" src="assets/images/person/man.svg" alt="">
+        </div>
+        <div class="mt-3 font-14dana-bold text-center text-light ">
+            سعید منوچهری
+        </div>
+        <mat-divider class="bg-light mt-3"></mat-divider>
+    </div>
+    <div class="div-items">
+        <side-nav-item name="داشبورد" [routerLink]="['/main/patients/dashboard']" icon="dashboard"></side-nav-item>
+        <side-nav-item name="پروفایل" icon="person"></side-nav-item>
+        <side-nav-item [routerLink]="['/main/patients/list']" name="لیست بیماران" icon="menu"></side-nav-item>
+        <side-nav-item [routerLink]="['/main/services']" name="تعریف خدمات" icon="settings"></side-nav-item>
+        <side-nav-item [routerLink]="['/main/doctor']" name="دندان پزشکان" icon="dentistry"></side-nav-item>
+        <side-nav-item [routerLink]="['/main/patients/list']" name="بیمه" icon="book"></side-nav-item>
+        <side-nav-item [routerLink]="['/main/patients/list']" name="انبار" icon="database"></side-nav-item>
+    </div>
+</div>

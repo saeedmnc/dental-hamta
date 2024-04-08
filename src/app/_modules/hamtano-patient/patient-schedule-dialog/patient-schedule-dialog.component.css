@@ -1,0 +1,23 @@
+.div-time{
+    border: 1px solid lightgray;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.div-hour{
+    height: 30px;
+    border-bottom: 1px solid lightgray;
+    background-color: #f3f3f3;
+}
+
+.div-min{
+    border-left: 1px solid #f3f3f3;
+    width: 25%;
+    height: 100%;
+}
+
+.schedule-disable{
+    background-color: #f3f3f3;
+    cursor:default;
+}

@@ -1,0 +1,15 @@
+<div class="div-main">
+    <div class="row m-0 px-0">
+        <div class="col-lg-12">
+            <hims-text-box [model]="service" propName="name" caption="نام گروه"></hims-text-box>
+        </div>
+    </div>
+    <div class="div-button text-center mt-3">
+        <button mat-button class="submit-btn" (click)="onSave()" >
+            ذخیره
+        </button>
+        <button mat-button class="cancel-btn mx-2" (click)="onClose()">
+            انصراف
+        </button>
+    </div>
+</div>

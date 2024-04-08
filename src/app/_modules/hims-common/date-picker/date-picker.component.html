@@ -1,0 +1,24 @@
+<div class="main">
+    <div class="caption iransans  caption" *ngIf="!isCaptionHoriz">
+        {{caption}}
+    </div>
+    <div class="div-date" [ngClass]="{'my-row':isCaptionHoriz}">
+        <div class="caption my-auto pb-2" *ngIf="isCaptionHoriz">
+            {{caption}}
+        </div>
+        <div class="px-1">
+            <ng-persian-datepicker [dateInitValue]="false" [timeEnable]="timeEnable" [dateFormat]="'YYYY/MM/DD'"
+            [timeShowSecond]="timeShowSecond">
+            <div class="input-container">
+                <span class="material-icons-outlined icon">
+                    date_range
+                </span>
+                <input (blur)="onBlur()" [ngClass]="{'border-left-red':isMandatory}" type="text"
+                    (ngModelChange)="onChangeData()"  class="form-control font-12 mt-1 input-field iransans font-12"
+                    style="direction:ltr;font-size: 12px!important;" [formControl]="dateValue" />
+            </div>
+        </ng-persian-datepicker>
+        </div>
+
+    </div>
+</div>

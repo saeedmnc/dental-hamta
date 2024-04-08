@@ -1,0 +1,44 @@
+<div class="div-main w-100">
+    <div class="rtl my-3 my-row w-100 justify-content-between " *ngIf="viewMode=='colors'">
+        <button *ngFor="let item of patologyBaseData.colors" class="item-btn"
+            [ngClass]="{'selected-btn':viewMode=='colors' && toothPatalogy.code==item.code}" mat-stroked-button
+            (click)="onSelectedChange('رنگ',item)">
+            {{item.name}}
+        </button>
+    </div>
+
+    <div class="rtl my-3 m-0 px-0 row w-100 justify-content-between " *ngIf="viewMode=='tooth-wear'">
+        <div class="col-lg-6 row" *ngFor="let item of patologyBaseData.toothWear">
+            <button class="big-btn" mat-stroked-button (click)="onSelectedChange('سایش',item)"
+                [ngClass]="{'selected-btn':viewMode=='tooth-wear' && toothPatalogy.code==item.code}">
+                {{item.name}}
+            </button>
+        </div>
+    </div>
+
+    <div class="rtl my-3 m-0 px-0 row w-100 justify-content-between " *ngIf="viewMode=='apical'">
+        <div class="col-lg-6  row" *ngFor="let item of patologyBaseData.apical">
+            <button class="big-btn" mat-stroked-button (click)="onSelectedChange('apical',item)"
+                [ngClass]="{'selected-btn':viewMode=='apical' && toothPatalogy.code==item.code}">
+                {{item.name}}
+            </button>
+        </div>
+    </div>
+
+    <div class="rtl my-3 m-0 px-0 row w-100 justify-content-between " *ngIf="viewMode=='development'">
+        <div class="col-lg-6 row" *ngFor="let item of patologyBaseData.development">
+            <button class="big-btn" mat-stroked-button (click)="onSelectedChange('اختلال رشد',item)"
+                [ngClass]="{'selected-btn':viewMode=='development' && toothPatalogy.code==item.code}">
+                {{item.name}}
+            </button>
+        </div>
+    </div>
+    <div class="rtl my-3 m-0 px-0 row w-100 justify-content-between " *ngIf="viewMode=='Fracture'">
+        <div class="col-lg-6 row" *ngFor="let item of patologyBaseData.Fracture">
+            <button class="big-btn" mat-stroked-button (click)="onSelectedChange('شکستگی',item)"
+                [ngClass]="{'selected-btn':viewMode=='Fracture' && toothPatalogy.code==item.code}">
+                {{item.name}}
+            </button>
+        </div>
+    </div>
+</div>

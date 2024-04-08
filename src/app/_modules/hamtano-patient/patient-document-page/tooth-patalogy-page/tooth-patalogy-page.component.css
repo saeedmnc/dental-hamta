@@ -1,0 +1,36 @@
+.div-main {
+    background-color: #f1f4f7;
+}
+
+.item-btn {
+    background-color: #fff;
+    /* padding: 18px 80px; */
+    text-align: center;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.selected-btn{
+    background-color: #7a8599;
+    color: white;
+}
+
+.bottom-btn{
+  
+    padding: 20px 24px;
+}
+
+.manitoring-btn{
+    color: #202633;
+    background-color: #ffd00a;
+}
+
+.save-btn{
+    background-color: #008fd6;
+    color: white;
+}
+.treat-btn{
+    background-color: #e13830;
+    color: white; 
+}

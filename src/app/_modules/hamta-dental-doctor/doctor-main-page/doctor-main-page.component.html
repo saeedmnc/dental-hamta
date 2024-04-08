@@ -1,0 +1,41 @@
+<div class="div-main">
+    <mat-sidenav-container class="vh-100">
+        <mat-sidenav class="w-50" [opened]="isOpenSchedule">
+            <doctor-schedule-selector (isCancelScheduleEvent)="isOpenSchedule=false"></doctor-schedule-selector>
+        </mat-sidenav>
+        <mat-sidenav-content class="">
+            <div class="row  m-0 px-0 mt-3">
+                <panel-haeder (openSidenavEvent)="cacheData.isSideOpen=!cacheData.isSideOpen"></panel-haeder>
+                <div class="row m-0 px-0">
+                    <mat-progress-bar mode="indeterminate" *ngIf="isBusy"></mat-progress-bar>
+                </div>
+                <div class="col-lg-3 h-100">
+                    <mat-card class="no-shadow-card h-100">
+                        <mat-card-content class="">
+                            <doctor-list (doctorEvent)="selectedDoctor($event)"
+                                [expertListTreeview]="expertListTreeView"></doctor-list>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-lg-9">
+                    <div class="my-row w-100">
+                        <mat-card class="no-shadow-card w-100 h-100">
+                            <mat-card-content class="">
+                                <create-doctor (isOpenScheduleEvent)="isOpenSchedule=$event" (saveEvent)="onSave()"
+                                    [doctor]="doctor"></create-doctor>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="my-row w-100 mt-3">
+                        <mat-card class="no-shadow-card w-100 h-100">
+                            <mat-card-content class="">
+                                <doctor-resume></doctor-resume>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+</div>
